@@ -26,7 +26,7 @@ const PostListHorizontal = ({ title, href, posts, hasBg }) => {
             <Link
               className='hidden font-bold lg:block text-lg underline'
               href={href}>
-              <span>查看全部</span>
+              <span>ALL</span>
               <i className='ml-2 fas fa-arrow-right' />
             </Link>
           )}
