@@ -22,6 +22,14 @@ const PostListHorizontal = ({ title, href, posts, hasBg }) => {
         {/* 标题 */}
         <div className='flex justify-between items-center py-6'>
           <h3 className='text-2xl'>{title}</h3>
+          {href && (
+            <Link
+              className='hidden font-bold lg:block text-lg underline'
+              href={href}>
+              <span>ALL</span>
+              <i className='ml-2 fas fa-arrow-right' />
+            </Link>
+          )}
         </div>
         {/* 列表 */}
         <div className='hidden lg:grid grid-cols-1 lg:grid-cols-4 gap-4'>
@@ -31,6 +39,12 @@ const PostListHorizontal = ({ title, href, posts, hasBg }) => {
         </div>
         <div className='block lg:hidden px-2'>
           <Swiper posts={posts} />
+          {href && (
+            <Link className='lg:hidden block text-lg underline' href={href}>
+              <span>ALL</span>
+              <i className='ml-2 fas fa-arrow-right' />
+            </Link>
+          )}
         </div>
       </div>
     </div>
